@@ -1,0 +1,25 @@
+version: '3.7'
+services:
+    nginx:
+        container_name: nginx
+        image: nginx:1.15.6
+        ports:
+            - 80:80
+            - 443:443
+        volumes:
+            - ./config:/etc/nginx/conf.d
+            - ./50x.html:/var/www/html/50x.html
+            - ./ssl/certs:/etc/ssl/certs
+            - ./ssl/private:/etc/ssl/private
+        networks:
+            - webnet
+        logging:
+            driver: 'json-file'
+            options:
+                max-size: '8m'
+                max-file: '10'
+        restart: always
+networks:
+    webnet:
+        name: webnet
+        driver: bridge

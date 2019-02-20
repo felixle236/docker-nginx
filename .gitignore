@@ -1,0 +1,14 @@
+# dependencies
+node_modules
+
+# logs
+npm-debug.log
+
+# Configuration
+ssl/
+config/
+
+# Others
+.idea
+.history
+.DS_Store
