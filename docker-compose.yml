@@ -10,7 +10,7 @@ services:
             - ./config:/etc/nginx/conf.d
             - ./50x.html:/var/www/html/50x.html
             - ./ssl/certs:/etc/ssl/certs
-            - ./ssl/private:/etc/ssl/private
+            - ./ssl/privates:/etc/ssl/privates
         networks:
             - webnet
         logging:
