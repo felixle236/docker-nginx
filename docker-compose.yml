@@ -8,7 +8,7 @@ services:
             - 443:443
         volumes:
             - ./config:/etc/nginx/conf.d
-            - ./50x.html:/var/www/html/50x.html
+            - ./html:/var/www/html
             - ./ssl/certs:/etc/ssl/certs
             - ./ssl/privates:/etc/ssl/privates
         networks:
