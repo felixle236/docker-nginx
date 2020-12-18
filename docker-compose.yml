@@ -1,16 +1,15 @@
-version: '3.7'
+version: '3.9'
 services:
     nginx:
         container_name: nginx
-        image: nginx:1.17.6
+        image: nginx:1.19.6
         ports:
             - 80:80
             - 443:443
         volumes:
             - ./config:/etc/nginx/conf.d
             - ./html:/var/www/html
-            - ./ssl/certs:/etc/ssl/certs
-            - ./ssl/privates:/etc/ssl/privates
+            - ./ssl:/etc/ssl/certs
         networks:
             - webnet
         logging:

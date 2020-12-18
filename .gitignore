@@ -1,6 +1,8 @@
 # Configuration
-ssl/
-config/
+ssl/**/*
+!ssl/.gitkeep
+config/**/*
+!config/.gitkeep
 
 # Others
 .idea
