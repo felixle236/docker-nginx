@@ -2,7 +2,7 @@ version: '3.9'
 services:
     nginx:
         container_name: nginx
-        image: nginx:1.21.0
+        image: nginx:1.21.5
         ports:
             - 80:80
             - 443:443
