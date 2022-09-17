@@ -1,8 +1,6 @@
 # Configuration
-ssl/certs/*
-ssl/privates/*
-!ssl/certs/.gitkeep
-!ssl/privates/.gitkeep
+ssl/*
+!ssl/.gitkeep
 config/**/*
 !config/.gitkeep
 
